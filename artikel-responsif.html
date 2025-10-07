@@ -3,82 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Berita Terkini</title>
+    <title>Berita Teknologi Terkini</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: "Poppins", Arial, sans-serif;
+            line-height: 1.7;
             margin: 0;
             padding: 0;
-            color: #333;
+            color: #2d2d2d;
+            background-color: #f5f7fa;
         }
+
         header {
-            background-color: #f4f4f4;
-            padding: 1rem;
+            background: linear-gradient(90deg, #0d2343, #2794b2);
+            color: rgb(252, 252, 252);
+            padding: 1.5rem 1rem;
             text-align: center;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
         }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+        }
+
         nav ul {
             list-style: none;
             padding: 0;
+            margin: 0.5rem 0 0;
         }
+
         nav ul li {
-            display: inline;
+            display: inline-block;
             margin: 0 1rem;
         }
+
         nav ul li a {
+            color: white;
             text-decoration: none;
-            color: #007bf0;
+            font-weight: 500;
+            transition: opacity 0.3s;
         }
+
+        nav ul li a:hover {
+            opacity: 0.8;
+        }
+
         main {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 1rem;
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
+
         article h1 {
-            color: #007bf0;
+            color: #ffffff;
+            font-size: 1.6rem;
+            margin-top: 0;
         }
+
         article .meta {
             font-style: italic;
-            color: #666;
+            color: #ffffff;
+            margin-bottom: 1rem;
         }
+
         figure {
-            margin: 1rem 0;
+            margin: 1.5rem 0;
             text-align: center;
         }
+
+        figure img {
+            width: 70%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s ease;
+        }
+
+        figure img:hover {
+            transform: scale(1.02);
+        }
+
         figcaption {
             font-size: 0.9em;
-            color: #666;
+            color: #792828;
             margin-top: 0.5rem;
         }
+
+        article p {
+            text-align: justify;
+            margin-bottom: 1.2rem;
+        }
+
         section {
-            margin-top: 2rem;
-            border-top: 1px solid #ddd;
-            padding-top: 1rem;
+            margin-top: 3rem;
+            border-top: 2px solid #007bf0;
+            padding-top: 1.5rem;
         }
+
+        section figure {
+            display: inline-block;
+            width: 48%;
+            margin: 1%;
+            vertical-align: top;
+        }
+
+        section figure img {
+            border-radius: 8px;
+        }
+
+        section figcaption {
+            color: #666;
+        }
+
         aside {
-            background-color: #f9f9f9;
-            padding: 1rem;
-            margin: 1rem 0;
-            border-left: 4px solid #007bf0;
+            background-color: #f0f7ff;
+            padding: 1.2rem;
+            margin: 2rem 0;
+            border-left: 5px solid #007bf0;
+            border-radius: 6px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
+
+        aside h3 {
+            margin-top: 0;
+            color: #007bf0;
+        }
+
+        /* ======== FOOTER ======== */
         footer {
-            background-color: #333;
+            background: #222;
             color: #fff;
             text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
+            padding: 1.5rem;
+            margin-top: 3rem;
+            box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
         }
+
         footer nav ul {
             list-style: none;
             padding: 0;
+            margin: 1rem 0 0;
         }
+
         footer nav ul li {
-            display: inline;
-            margin: 0 0.5rem;
+            display: inline-block;
+            margin: 0 0.6rem;
         }
+
         footer nav ul li a {
-            color: #fff;
+            color: #00c6ff;
             text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer nav ul li a:hover {
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {}
+        nav ul li {
+            display: block;
+            margin: 0.5rem 0;
+        }
+
+        section figure {
+            width: 100%;
+            margin: 0 0 1.5rem 0;
         }
     </style>
 </head>
@@ -101,10 +196,10 @@
             </header>
 
             <figure>
-                <img src="img/gambar1.jpg" 
-                     sizes="(max-width: 600px) 100, 800px"
-                     alt="Foto Peresmian Wifi 6E dan Wifi 7"
-                     srcset="gambar1.jpg 600px, gambar2.png 1200px"
+                <img src="img/gambar-utama-kecil.jpg" 
+                     srcset="img/gambar-utama-kecil.jpg 600w, img/gambar-utama-kecil.jpg 1200w"
+                     sizes="(max-width: 600px) 100vw, 800px"
+                     alt="Ilustrasi inovasi AI dalam dunia kerja modern"
                      loading="eager">
                 <figcaption>Foto Peresmian Wifi 6E dan Wifi 7.</figcaption>
             </figure>
@@ -114,7 +209,7 @@
             </p>
 
             <p>
-            Jakarta, InfoPublik – Pemerintah meluncurkan teknologi Wi-Fi 6E dan Wi-Fi 7 pada pita frekuensi 6 GHz sebagai bagian dari program 100 hari pertama Presiden Prabowo Subianto untuk mempercepat transformasi digital. Menteri Komunikasi dan Digital, Meutya Hafid, menyebut langkah ini sebagai tonggak penting karena menawarkan kecepatan hingga 46 Gbps, latensi rendah, serta performa lebih andal di lingkungan padat pengguna.
+            Jakarta, Info Publik – Pemerintah meluncurkan teknologi Wi-Fi 6E dan Wi-Fi 7 pada pita frekuensi 6 GHz sebagai bagian dari program 100 hari pertama Presiden Prabowo Subianto untuk mempercepat transformasi digital. Menteri Komunikasi dan Digital, Meutya Hafid, menyebut langkah ini sebagai tonggak penting karena menawarkan kecepatan hingga 46 Gbps, latensi rendah, serta performa lebih andal di lingkungan padat pengguna.
             </p>
 
             <p>
@@ -126,9 +221,8 @@
             </p>
         </article>
 
-        <hr><hr>
-
         <section>
+            <h2>Foto Terkait Berita Di atas</h2>
             <figure>
                 <img src="img/galeri-1.jpg" 
                      alt="Gambaran wifi 7"
@@ -143,12 +237,15 @@
                      <figcaption>Perbandingan Antara Wifi 6E dan Wifi 7</figcaption>
             </figure>
         </section>
-         
-        <hr><hr>
 
         <aside>
             <h3>Profile Developer Singkat</h3>
             <p>Galuh Gunawan adalah seorang mahasiswa Teknik Informatika semster 3 yang sedang belajar membuat web dan mendalami AI.</p>
+            <h3>Baca Juga</h3>
+            <ul>
+                <li><a href="https://www.cnbcindonesia.com/tech/20250907140906-37-664778/china-luncurkan-internet-10g-pertama-di-dunia-cek-kecepatannya" target="_blank">China Luncurkan Internet 10G Pertama Di Dunia</a></li>
+                <li><a href="https://www.gramedia.com/literasi/sejarah-internet/" target="_blank">Sejarah Internet hingga Perkembangannya di Indonesia Saat ini</a></li>
+            </ul>
         </aside>
     </main>
 
